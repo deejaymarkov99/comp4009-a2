@@ -1,5 +1,11 @@
 COMP 4001 Assignment 2
 
+"The goal of this assignment is to write a CILK++ program to multiply two matrices. You should implement the "no temp array" version shown below, as discussed in class. That is, recursive "MultA" calls should not allocate new temporary arrays. 
+
+http://images.slideplayer.com/25/7698907/slides/slide_24.jpg
+
+Make sure you implement the "shuffled row major order / z-order" (described here: http://en.wikipedia.org/wiki/Z-order_curve) of matrices discussed in class, and thereby avoid copying of sub-matrices by passing all submatrices as "pointer,length" values. Note that, all generated input/output matrices are to be displayed in standard row-wise order, so you will need to write a function to print a Z-order matrix (this will come in handy for debugging as well)."
+
 All code by Damjan Markovic, based on cilk_template code provided.
 
 The code seg-faults when attempting to perform MultA on a square matrix with size 1024 or greater. I suspect this to have
